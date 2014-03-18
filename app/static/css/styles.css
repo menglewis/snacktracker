@@ -1,0 +1,9 @@
+.goal {
+    font-size: 20px;
+    font-weight: 500;
+    list-style-type: none;
+}
+
+.goal-table {
+    max-width: 600px;
+}

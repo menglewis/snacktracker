@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block css %}<link rel="stylesheet" href="{{ url_for('.static', filename = 'css/styles.css') }}">{% endblock %}
+
+{% block content %}
+
+<h2>Week {{ current_user.last_week.date_range }}</h2>
+
+<h3>Current Goals</h3>
+
+<table class="table table-bordered table-hover goal-table">
+<tr><th>Goal Type</th><th>Done</th><th>Goal</th><th>Add</th><th>Remove</th></tr>
+{% for goal in current_user.last_week.goals %}
+    <tr id="goal_{{ goal.id }}">
+        <td class="goal-type">{{ goal.goal_type.name }}</td>
+        <td class="remaining">{{ goal.actual_quantity }}</td>
+        <td class="total">{{ goal.goal_quantity }}</td>
+        <td><button goalid="{{ goal.id }}" class="add-button btn btn-primary">Add</button></td>
+        <td><button goalid="{{ goal.id }}" class="remove-button btn btn-danger">Remove</button></td>
+    </tr>
+{% endfor %}
+</table>
+
+{% endblock %}
+
+{% block js %}<script src="{{ url_for('.static', filename = 'js/snack.js') }}"></script>{% endblock %}
