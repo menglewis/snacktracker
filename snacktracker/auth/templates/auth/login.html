@@ -1,0 +1,19 @@
+
+{% extends "base.html" %}
+
+{% block page_title %}Login{% endblock %}
+
+{% block content %}
+<div class="container">
+
+  <br/>
+  <form method="POST" action="{{ url_for('auth.login') }}" class="form-signin">
+    <h2>Login</h2>
+    {{ form.csrf_token }}
+    {{ form.username(placeholder="Username", class_="form-control") }}<br/>
+    {{ form.password(placeholder="Password", class_="form-control") }}<br/>
+    {{ form.remember_me }} {{ form.remember_me.label }}<br/>
+    <input type="submit" value="Login" class="btn btn-primary btn-block">
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+# Flask
+Flask==0.10.1
+Jinja2==2.7.2
+Werkzeug==0.9.4
+itsdangerous==0.24
+MarkupSafe==0.19
+
+# Database
+Flask-SQLAlchemy==1.0
+SQLAlchemy==0.9.4
+Flask-Migrate==1.2.0
+alembic==0.6.4
+
+# Forms
+Flask-WTF==0.9.4
+WTForms==1.0.5
+
+# Auth
+Flask-Login==0.2.10
+Flask-Bcrypt==0.5.2
+py-bcrypt==0.4
+
+# Script
+Flask-Script==0.6.7

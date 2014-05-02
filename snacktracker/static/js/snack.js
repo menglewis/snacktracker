@@ -8,7 +8,7 @@ $(document).ready(function() {
                 id: id
             },
             success: function(data, textStatus, jqXHR) {
-                console.log(data.quantity);
+                //console.log(data.quantity);
                 $("#goal_" + id + " .remaining").html(data.quantity);
             },
             error: function(jqXHR, textStatus, errorThrown) {
@@ -25,7 +25,7 @@ $(document).ready(function() {
                 id: id
             },
             success: function(data, textStatus, jqXHR) {
-                console.log(data.quantity);
+                //console.log(data.quantity);
                 $("#goal_" + id + " .remaining").html(data.quantity);
             },
             error: function(jqXHR, textStatus, errorThrown) {
